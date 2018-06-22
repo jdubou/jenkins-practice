@@ -1,6 +1,7 @@
 node {
   stage("Build") {
     echo "Building Jenkinsfile"
-    echo "New Builds"	
+    echo "New Builds"
+    curl -X POST http://localhost.8080/job/PIPE/build?token=TOKEN
 	}
 }
