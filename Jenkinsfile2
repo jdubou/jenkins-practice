@@ -1,0 +1,8 @@
+node('docker') {
+    checkout scm
+    stage('Build') {
+        docker.image(M3).inside {
+            bat 'mvn --version'
+        }
+    }
+}
